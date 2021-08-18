@@ -1,0 +1,182 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.split {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: #fbad50;
+}
+
+.mid {
+    left: 50%;
+    background-color: rgba(17, 17, 17, 0.884);
+}
+
+.mid2 {
+    right: 0;
+    background-color: #1991db;
+}
+
+.right {
+    left: 25%;
+    background-color: #0e76a8;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+img,
+h2 {
+    cursor: pointer;
+    transition: .5s;
+}
+
+h2 {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+img {
+    border: 1px solid #fff;
+    padding: 9px;
+}
+
+img:hover {
+    width: 200px;
+}
+
+h2:hover {
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+
+.fa {
+    width: 100px;
+    height: 65px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 35px;
+    transition: .5s;
+}
+
+.fa-twitter {
+    background: #55acee;
+    color: white;
+}
+
+.fa-twitter:hover {
+    background: linear-gradient(40deg, #4a9ddd, rgba(206, 206, 206, 0.76), #55acee);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+.fa-linkedin-square {
+    background: #006ea1;
+    color: white;
+}
+
+.fa-linkedin-square:hover {
+    background: linear-gradient(40deg, #006ea1, rgba(206, 206, 206, 0.76), #006ea1);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+.fa-instagram {
+    background: rgb(138, 58, 185);
+    background: linear-gradient(208deg, rgba(138, 58, 185, 1) 35%, rgba(188, 42, 141, 1) 54%, rgba(252, 204, 99, 1) 97%, rgba(251, 173, 80, 1) 100%);
+    color: white;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(40deg, #8a3ab9, #bc2a8d, #fccc63, #fbad50);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+.fa-github {
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+
+.fa-github:hover {
+    background: linear-gradient(40deg, rgb(58, 56, 56), rgba(78, 255, 116, 0.76), rgb(39, 38, 38));
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+.fa:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 55%;
+}
+
+@media screen and (max-width:850px) {
+    .split {
+        display: flex;
+        height: 24%;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .left {
+        top: 0;
+    }
+    .mid {
+        top: 25%;
+    }
+    .mid2 {
+        top: 50%;
+    }
+    .right {
+        top: 75%;
+    }
+    .centered img {
+        width: 100px;
+    }
+    img {
+        margin-bottom: -10px;
+    }
+    .fa {
+        width: 75px;
+        height: 54px;
+        padding-top: 24px;
+        margin: 20px 0 0 10px;
+    }
+}
+
+@media screen and(max-width:400px) {
+    .fa {
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
